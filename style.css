@@ -1,4 +1,4 @@
-/* Base reset and fonts */
+
 * {
   margin: 0;
   padding: 0;
@@ -64,10 +64,9 @@ a {
 }
 
 .scroll-button:hover {
-  background: #ffaaa5; /* slightly darker pastel */
-}
+  background: #e389ff; 
 
-/* Section styles */
+}
 .section {
   min-height: 100vh;
   display: flex;
@@ -98,10 +97,9 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: #f3f3f3;
+  background-color: #ffdbf1;
   font-size: 0.9rem;
 }
