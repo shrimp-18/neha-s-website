@@ -103,3 +103,20 @@ h2 {
   background-color: #ffdbf1;
   font-size: 0.9rem;
 }
+.about-content {
+  display: flex;
+  align-items: center; 
+  gap: 20px;      
+  justify-content: flex-start;     
+  padding-left: 80px;
+}
+
+.mypic {
+  width: 400px;       
+  height: auto;        
+  border-radius: 10px; 
+}
+
+.text {
+  flex: 1;             
+}
