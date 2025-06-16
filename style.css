@@ -122,11 +122,8 @@ h2 {
   flex: 1;             
 }
 
-/* --------------------- */
-/* ✅ Mobile Responsiveness */
-/* --------------------- */
 @media (max-width: 768px) {
-  .hero h1 {
+   .hero h1 {
     font-size: 2rem;
   }
 
@@ -161,3 +158,33 @@ h2 {
     font-size: 1.5rem;
   }
 }
+
+#sprinkle-con {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100000;
+}
+
+.sprinkle {
+  position: absolute;
+  top: 0;
+  font-size: 100px;
+  animation: fall 4s linear forwards;
+  opacity: 100;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 100;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
