@@ -3,9 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Pinyon Script',cursive;
   line-height: 1.6;
   color: #333;
   scroll-behavior: smooth;
@@ -15,6 +20,14 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.collage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* spacing between letters */
+  margin-bottom: 20px; /* space before text */
+}
+
 
 .hero {
   height: 100vh;
@@ -96,6 +109,14 @@ a {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
+.hero quote{
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
+  color: #333;
+
+}
 
 .highlight {
   color: #f78fb3;
@@ -143,10 +164,7 @@ a {
   background-color: #d5f4e6;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+
 
 .footer {
   text-align: center;
@@ -208,4 +226,50 @@ h2 {
   h2 {
     font-size: 1.5rem;
   }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em;
+  z-index: 10;
+}
+
+.burger img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #decdfb94;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 11;
+}
+
+.side-menu a {
+  padding: 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-menu a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  text-decoration: none;
 }
