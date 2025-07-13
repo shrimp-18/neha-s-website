@@ -19,7 +19,7 @@ a {
 .hero {
   height: 100vh;
   background-color: #fceaffb1; 
-  background-image: url('ghibli.gif'); 
+  background-image: url('images/ghibli.gif'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -52,10 +52,19 @@ a {
 }
 .cam{
   position:absolute;
-  top:80% ;
-  right:80%;
+  top:15% ;
+  right:0%;
   width: 200px;
   height: auto;
+  transform: scaleX(1);
+  animation: float 2s ease-in-out infinite;
+}
+
+
+.cam:hover{
+  filter: drop-shadow(0 0 5px #008d5b)
+        drop-shadow(0 0 10px #47c8ff)
+        drop-shadow(0 0 20px #558eff);
 }
 .radio:hover{
    filter: drop-shadow(0 0 5px #ff00bb)
