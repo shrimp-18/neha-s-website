@@ -18,8 +18,8 @@ a {
 
 .hero {
   height: 100vh;
-  background-color: #fceaff; 
-  background-image: url('ghibli.gif'); 
+  background-color: #fceaffb1; 
+  background-image: url('dither_it_ghibli.gif'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -37,7 +37,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.105); 
   z-index: -1;
 }
 
