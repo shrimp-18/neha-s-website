@@ -249,9 +249,10 @@ body{
 
 
 .footer{
-  background:#283F75;
-  color:#FFF6B8;
+  background:#C1ECFD;
+  color:#283F75;
   text-align:center;
   padding:15px;
-  font-size:14px;
+  font-size:22px;
+  font-weight: 300;
 }
