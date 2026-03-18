@@ -1,126 +1,256 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
+
 @font-face {
-  font-family:'Things' ;
+  font-family:'Things';
   src: url('fonts/Things-Regular.ttf');
 }
 @font-face {
-  font-family: ;
-  src: url();
+  font-family: 'Saira';
+  src: url('fonts/SairaCondensed-Regular.ttf');
 }
 body{
-font-family:'Things', serif;
+  font-family:'Things';
 }
 
 
+/* NAVBAR */
 
 .navbar{
-background:#283F75;
-display:flex;
-justify-content:space-around;
-padding:20px;
+  background:#283F75;
+  display:flex;
+  justify-content:space-around;
+  padding:15px 0  1px;
+  align-items:flex-end; 
+  border-bottom: 6px solid #FFF6B8;
 }
 
 .navbar a{
-text-decoration:none;
-color:#FFF6B8;
-font-size:22px;
-letter-spacing:2px;
+  font-family: Saira;
+  text-decoration:none;
+  color:#FFF6B8;
+  font-size:32px;
+  letter-spacing:2px;
 }
 
-/* HERO SECTION */
+
+/* HERO */
 
 .hero{
-position:relative;
-height:90vh;
-background:#F70A36;
-display:flex;
-justify-content:center;
-align-items:center;
+  position:relative;
+  height:100vh;
+  background:#F70A36;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
 }
 
 .title{
-color:#f4e9b0;
-font-size:90px;
-text-align:center;
-z-index:2;
+  font-weight: 500;
+  position: relative;
+  z-index: 10;
+  color: #FFF6B8;
+
+  font-size: 125px;
+  text-align: center;
+
+  line-height: 0.8;
+  letter-spacing: 0px;
+ -webkit-text-stroke: 1.5px #FFF6B8; 
+ z-index: 20;
+ 
 }
 
-/* IMAGE STYLING */
 
+
+.line2{
+  margin-left: 190px; /* THIS creates the offset */
+}
 .img{
-position:absolute;
-width:200px;
+  position:absolute;
+  height:auto;
+  object-fit:contain;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,0.2));
+
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.15s ease-out, filter 0.15s ease-out;
+  z-index:2;
+
+  will-change: transform;
 }
 
-/* Individual placements */
 
-.clover{
-top:120px;
-left:80px;
+
+.img:hover{
+  transform: scale(1.12) rotate(calc(var(--rot, 0deg) + 2deg)) translateY(-10px);
+  filter: drop-shadow(0 20px 25px rgba(0,0,0,0.35));
+  cursor:pointer;
 }
 
-.grapes{
-top:150px;
-right:350px;
+
+
+
+.paint{
+  width:14%;
+  top:18%;
+  left:28%;
+  --rot:-3deg;
+  z-index: 5;
 }
 
-.cherry{
-bottom:160px;
-left:120px;
+.vinyl{
+  width:16%;
+  bottom:28%;
+  left:18%;
+  --rot:-4deg;
+  z-index: 3;
 }
 
-.bow{
-bottom:180px;
-left:400px;
-}
-
-.letters{
-bottom:120px;
-right:500px;
+.radio{
+  width:12%;
+  bottom:32%;
+  left:32%;
+  --rot:-2deg;
+  z-index: 6;
 }
 
 .calendar{
-top:120px;
-right:120px;
+  width:13%;
+  bottom:18%;
+  left:28%;
+  --rot:-2deg;
+  z-index: 13;
+}
+
+.vine{
+  width:8%;
+  bottom:18%;
+  left:10%;
+  --rot:2deg;
+  z-index: 4;
+}
+
+.grapes{
+  width:5%;
+  bottom:12%;
+  left:34%;
+  --rot:-2deg;
+}
+
+
+
+
+.pcb{
+  width:14%;
+  bottom:22%;
+  left:45%;
+  
+  --rot:-1deg;
+  z-index: 9;
 }
 
 .star{
-
+  width:3%;
+  top:28%;
+  left:46%;
+  --rot:-3deg;
+  z-index: 12;
 }
+
 .starbig{
-
+  width:4%;
+  top:24%;
+  left:42%;
+  --rot:2deg;
+  z-index: 11;
 }
+
 .stamp{
-
+  width:6%;
+  top:30%;
+  left:52%;
+  --rot:3deg;
+  z-index: 10;
 }
-.pcb{
 
-}
-.belt{
 
-}
-.plumeria{
 
-}
-.radio{
 
-}
-.paint{
-
-}
-.vine{
-
-}
-.vinyl{
-
-}
 .camera{
-
+  width:14%;
+  top:24%;
+  right:30%;
+  --rot:-2deg;
+  z-index: 2;
 }
+
 .reciept{
-  
+  width:16%;
+  top:18%;
+  right:18%;
+  --rot:2deg;
+  z-index: 1;
+}
+
+.bow{
+  width:5%;
+  top:14%;
+  right:12%;
+  --rot:2deg;
+  z-index: 15;
+}
+
+.letters{
+  width:12%;
+  top:42%;
+  right:18%;
+  --rot:-2deg;
+  z-index: 14;
+}
+
+.belt{
+  width:8%;
+  bottom:30%;
+  right:32%;
+  --rot:3deg;
+  z-index: 8;
+}
+
+.plumeria{
+  width:10%;
+  bottom:16%;
+  right:22%;
+  --rot:2deg;
+  z-index: 7;
+}
+
+.clover{
+  width:6%;
+  bottom:18%;
+  right:28%;
+  --rot:-2deg;
+  z-index: 17;
+}
+
+.cherry{
+  width:6%;
+  bottom:10%;
+  right:10%;
+  --rot:-3deg;
+  z-index: 16;
+}
+
+
+
+
+.footer{
+  background:#283F75;
+  color:#FFF6B8;
+  text-align:center;
+  padding:15px;
+  font-size:14px;
 }
