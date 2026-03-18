@@ -29,7 +29,7 @@ body{
 }
 
 .navbar a{
-  font-family: Saira;
+  font-family: Saira, serif;
   text-decoration:none;
   color:#FFF6B8;
   font-size:32px;
@@ -50,6 +50,7 @@ body{
 }
 
 .title{
+  right: 2%;
   font-weight: 500;
   position: relative;
   z-index: 10;
@@ -61,14 +62,14 @@ body{
   line-height: 0.8;
   letter-spacing: 0px;
  -webkit-text-stroke: 1.5px #FFF6B8; 
- z-index: 20;
+  z-index: 20;
  
 }
 
 
 
 .line2{
-  margin-left: 190px; /* THIS creates the offset */
+  margin-left: 190px; 
 }
 .img{
   position:absolute;
@@ -95,33 +96,33 @@ body{
 
 
 .paint{
-  width:14%;
-  top:18%;
-  left:28%;
+  width:15%;
+  top:20%;
+  left:24%;
   --rot:-3deg;
   z-index: 5;
 }
 
 .vinyl{
-  width:16%;
-  bottom:28%;
-  left:18%;
+  width:15%;
+  bottom:20%;
+  left:20%;
   --rot:-4deg;
   z-index: 3;
 }
 
 .radio{
   width:12%;
-  bottom:32%;
-  left:32%;
+  bottom:28.5%;
+  left:35%;
   --rot:-2deg;
   z-index: 6;
 }
 
 .calendar{
   width:13%;
-  bottom:18%;
-  left:28%;
+  bottom:6%;
+  left:26%;
   --rot:-2deg;
   z-index: 13;
 }
@@ -129,16 +130,17 @@ body{
 .vine{
   width:8%;
   bottom:18%;
-  left:10%;
+  left:20%;
   --rot:2deg;
   z-index: 4;
 }
 
 .grapes{
-  width:5%;
-  bottom:12%;
-  left:34%;
+  width:7.5%;
+  bottom:1%;
+  left:33%;
   --rot:-2deg;
+  z-index: 18;
 }
 
 
@@ -146,8 +148,8 @@ body{
 
 .pcb{
   width:14%;
-  bottom:22%;
-  left:45%;
+  bottom:9%;
+  left:40%;
   
   --rot:-1deg;
   z-index: 9;
@@ -156,22 +158,22 @@ body{
 .star{
   width:3%;
   top:28%;
-  left:46%;
+  left:43%;
   --rot:-3deg;
   z-index: 12;
 }
 
 .starbig{
   width:4%;
-  top:24%;
-  left:42%;
+  top:26%;
+  left:40%;
   --rot:2deg;
   z-index: 11;
 }
 
 .stamp{
   width:6%;
-  top:30%;
+  top:29%;
   left:52%;
   --rot:3deg;
   z-index: 10;
@@ -181,47 +183,47 @@ body{
 
 
 .camera{
-  width:14%;
-  top:24%;
-  right:30%;
+  width:15%;
+  top:30%;
+  right:31%;
   --rot:-2deg;
   z-index: 2;
 }
 
 .reciept{
-  width:16%;
+  width:18%;
   top:18%;
-  right:18%;
+  right:21%;
   --rot:2deg;
   z-index: 1;
 }
 
 .bow{
-  width:5%;
+  width:14%;
   top:14%;
-  right:12%;
+  right:14%;
   --rot:2deg;
   z-index: 15;
 }
 
 .letters{
-  width:12%;
-  top:42%;
-  right:18%;
+  width:16%;
+  top:38%;
+  right:15%;
   --rot:-2deg;
   z-index: 14;
 }
 
 .belt{
-  width:8%;
-  bottom:30%;
-  right:32%;
+  width:8.5%;
+  bottom:23%;
+  right:36%;
   --rot:3deg;
   z-index: 8;
 }
 
 .plumeria{
-  width:10%;
+  width:15%;
   bottom:16%;
   right:22%;
   --rot:2deg;
@@ -229,17 +231,17 @@ body{
 }
 
 .clover{
-  width:6%;
-  bottom:18%;
-  right:28%;
+  width:7%;
+  bottom:12%;
+  right:43%;
   --rot:-2deg;
   z-index: 17;
 }
 
 .cherry{
-  width:6%;
+  width:10%;
   bottom:10%;
-  right:10%;
+  right:14%;
   --rot:-3deg;
   z-index: 16;
 }
