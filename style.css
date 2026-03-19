@@ -16,7 +16,9 @@ body{
   font-family:'Things';
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
 
 .navbar{
   background:#283F75;
