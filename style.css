@@ -26,7 +26,7 @@ html{
   justify-content:space-around;
   padding:15px 0  1px;
   align-items:flex-end; 
-  border-bottom: 6px solid #FFF6B8;
+  border-bottom: 4px solid #FFF6B8;
 }
 
 .navbar a{
@@ -36,10 +36,96 @@ html{
   font-size:32px;
   letter-spacing:2px;
 }
+.group{
+  width:26%;
+  top:15%;
+  right:4%;
+   position:absolute;
+  height:auto;
+  object-fit:contain;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,0.2));
 
 
+}
+.text{
+  position: absolute;
+  font-family: Things, serif;
+  color: #F70A36;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: left;
+  left: 2.6%;
+  top: 25%;
+  -webkit-text-stroke: 0.5px #F70A36;
+  max-width: 1100px;
+  margin-right:  10px;
+}
+.smalltext{
+  position: absolute;
+  font-family: Things, serif;
+  color:#283F75;
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+  right: 9%;
+  top: 95%;
+  -webkit-text-stroke: 0.5px #283F75;
+  
 
-
+}
+.contact-links{
+  position: absolute;
+  font-family: Saira, serif;
+  color:#F70A36;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: left;
+  left: 2.6%;
+  top: 90%;
+  -webkit-text-stroke: 0.5px #283F75;
+}
+.gmail{
+  cursor: pointer;
+  position: absolute;
+  width: 70px;
+  top: 100%;
+}
+.github{
+  cursor: pointer;
+  left: 100%;
+  position: absolute;
+  width: 70px;
+}
+.linkedin{
+  left: 200%;
+  cursor: pointer;
+  position: absolute;
+  width: 70px;
+}
+.instagram{
+  left: 300%;
+  cursor: pointer;
+  position: absolute;
+  width: 70px;
+}
+.pinterest{
+  left: 430%;
+  cursor: pointer;
+  position: absolute;
+  width: 65px;
+}
+.spotify{
+  left: 517%;
+  cursor: pointer;
+  position: absolute;
+  width: 68px;
+  top: 100%;
+  
+}
+.ima{
+  position: absolute;
+  display: inline-block;
+}
 .hero{
   position:relative;
   height:100vh;
