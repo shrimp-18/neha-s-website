@@ -47,7 +47,73 @@ body{
   align-items:center;
   overflow:hidden;
 }
+.about{
+  position:relative;
+  height:100vh;
+  background:#FFF6B8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  border-bottom: 5px solid #F70A36;
 
+}
+.wid{
+  position:relative;
+  height:100vh;
+  background:#FFF6B8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  border-bottom: 5px solid #F70A36;
+
+}
+.projects{
+  position:relative;
+  height:100vh;
+  background:#FFF6B8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  border-bottom: 5px solid #F70A36;
+
+}
+.blog{
+  position:relative;
+  height:100vh;
+  background:#FFF6B8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  border-bottom: 5px solid #F70A36;
+}
+.friends{
+  position:relative;
+  height:100vh;
+  background:#FFF6B8;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  
+
+}
+.abt{
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+  font-size: 120px;
+  color: #F70A36;   /* your red */
+  font-weight: 500;
+
+  line-height: 0.8;
+  letter-spacing: 0px;
+ -webkit-text-stroke: 0.8px #F70A36;
+}
 .title{
   right: 2%;
   font-weight: 500;
@@ -77,18 +143,16 @@ body{
   filter: drop-shadow(0 10px 12px rgba(0,0,0,0.2));
 
   transform: rotate(var(--rot, 0deg));
-  transition: transform 0.15s ease-out, filter 0.15s ease-out;
+  transition: transform 0.08s ease-out, filter 0.12s ease-out; 
   z-index:2;
 
   will-change: transform;
 }
 
 
-
 .img:hover{
   transform: scale(1.12) rotate(calc(var(--rot, 0deg) + 2deg)) translateY(-10px);
-  filter: drop-shadow(0 20px 25px rgba(0,0,0,0.35));
-  cursor:pointer;
+  filter: drop-shadow(0 18px 22px rgba(0,0,0,0.35));
 }
 
 
