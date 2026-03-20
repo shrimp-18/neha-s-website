@@ -176,7 +176,7 @@ html{
   justify-content:center;
   align-items:center;
   overflow:hidden;
-  border-bottom: 5px solid #F70A36;
+  
 }
 .friends{
   position:relative;
@@ -454,10 +454,23 @@ canvas{
   top: 20%;
   right: 5%;
   border: 8px solid #283F75;
-  background: white;
+  background: #fffce9;
   cursor: crosshair;
 }
-
+.dms{
+  position: absolute;
+  top: 14%;
+  right: 5%;
+  font-size: 20px;
+}
+.let{
+  position: absolute;
+  top: 62%;
+  left: 80%;
+  width: 250px;
+  z-index: 30;
+  transform: rotate(45deg);
+}
 .canvas-controls{
   top: 91%;
   right: 5.5%;
@@ -476,4 +489,38 @@ canvas{
   font-family: Saira, serif;
 
   transition: 0.2s ease;
+}
+#contact-form{
+  position: absolute;
+  left: 2%;
+  top: 28%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+#contact-form input,
+#contact-form textarea{
+  width: 800px;
+  padding: 10px;
+
+  border: 5px solid #283F75;
+  background: #fffbe1;
+  font-size: 20px;
+
+  font-family: 'Saira', serif;
+}
+
+#contact-form textarea{
+  height: 300px;
+  resize: none;
+}
+.arrow{
+  position: absolute;
+  display: flex;
+  width: 5%;
+  left: 35%;
+  top: 20%;
 }

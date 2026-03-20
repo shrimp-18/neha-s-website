@@ -34,17 +34,30 @@ function draw(e){
 function clearCanvas(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-function sendDrawing(){
+function sendEverything(){
+  const name = document.querySelector('[name="user_name"]').value;
+  const email = document.querySelector('[name="user_email"]').value;
+  const message = document.querySelector('[name="message"]').value;
+
   const dataURL = canvas.toDataURL("image/png");
 
-  emailjs.send("service_jalzt7e", "template_p36x7l9", {
+  const params = {
+    user_name: name,
+    user_email: email,
+    message: message,
     image: dataURL
-  })
+  };
+
+  console.log(params);
+
+  emailjs.send("service_jalzt7e", "template_p36x7l9", params)
   .then(() => {
-    alert("sent 💌");
+    alert("sent <3");
+    document.getElementById("contact-form").reset();
+    clearCanvas();
   })
   .catch((error) => {
-    console.error("FAILED...", error);
-    alert("failed 😭");
+    console.error(error);
+    alert("failed :(");
   });
 }
