@@ -75,3 +75,4 @@ function setColor(color){
 
   event.target.classList.add('active');
 }
+

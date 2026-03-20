@@ -14,6 +14,7 @@
 }
 body{
   font-family:'Things';
+  cursor: url('assets/c.png'), auto;
 }
 
 html{
@@ -180,7 +181,7 @@ html{
 }
 .friends{
   position:relative;
-  height:100vh;
+  height:110vh;
   background:#FFF6B8;
   display:flex;
   justify-content:center;
