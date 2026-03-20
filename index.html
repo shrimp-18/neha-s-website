@@ -127,7 +127,7 @@
   </div>
   <div class="canvas-controls">
   <span onclick="clearCanvas()">CLEAR</span>
-  <span onclick="downloadDrawing()">SEND</span>
+ <span onclick="sendDrawing(); return false;">SEND</span>
   </div>
 
 
@@ -138,8 +138,9 @@
   <footer class="footer">
   <p>© 2026 Neha Lalit Kumar Arya. All rights reserved.</p>
   </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="whiteboard.js"></script>
+  
 </body>
 
 </html>
