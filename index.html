@@ -50,8 +50,9 @@
     <img src="assets/vine.png" class="img vine">
     <img src="assets/vinyl.png" class="img vinyl">
     <img src="assets/camera.png" class="img camera">
-    <img src="assets/reciept.png" class="img reciept"> 
-
+    <img src="assets/reciept.png" class="img reciept">
+    <a href="#about"><div class="scroll"><p>SCROLL ↓</p></div></a> 
+    
   </section>
   <section id="about" class="about">
 
@@ -91,7 +92,7 @@
   </section>
   <section id="wid" class="wid">
 
-  <h2 class="abt">what do i do?</h2>
+  <h2 class="abtw">what do i do?</h2>
 
   <p>
     
@@ -116,9 +117,19 @@
   </p>
 
   </section>
+  
   <section id="friends" class="friends">
 
   <h2 class="abt">friends.</h2>
+  <div class="whiteboardd">
+      
+  <canvas id="canvas"></canvas>
+  </div>
+  <div class="canvas-controls">
+  <span onclick="clearCanvas()">CLEAR</span>
+  <span onclick="downloadDrawing()">SEND</span>
+  </div>
+
 
 
   </section>
@@ -128,6 +139,7 @@
   <p>© 2026 Neha Lalit Kumar Arya. All rights reserved.</p>
   </footer>
 
+  <script src="whiteboard.js"></script>
 </body>
 
 </html>
