@@ -76,3 +76,8 @@ function setColor(color){
   event.target.classList.add('active');
 }
 
+<script>
+function openBlog() {
+  window.open("blog1.html", "_blank");
+}
+</script>
