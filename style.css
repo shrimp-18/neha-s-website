@@ -185,7 +185,7 @@ html{
 }
 .friends{
   position:relative;
-  height:110vh;
+  height:100vh;
   background:#FFF6B8;
   display:flex;
   justify-content:center;
@@ -675,4 +675,325 @@ canvas{
 
 .blog-card.real:hover {
   transform: scale(1.03);
+}
+
+/* ——— Responsive (desktop styles above unchanged) ——— */
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+    padding: 12px 10px 8px;
+  }
+
+  .navbar a {
+    font-size: clamp(18px, 3.2vw, 32px);
+    letter-spacing: 1px;
+  }
+
+  .title {
+    font-size: clamp(52px, 12vw, 125px);
+    padding: 0 12px;
+  }
+
+  .line2 {
+    margin-left: clamp(40px, 18vw, 190px);
+  }
+
+  .scroll {
+    font-size: clamp(16px, 3vw, 25px);
+    right: 2%;
+  }
+
+  .about,
+  .projects,
+  .friends {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 48px;
+  }
+
+  .blog {
+    height: auto;
+    min-height: 50vh;
+    overflow: visible;
+    padding-bottom: 32px;
+  }
+
+  .abt {
+    position: relative;
+    top: auto;
+    left: auto;
+    font-size: clamp(56px, 14vw, 120px);
+    padding: 24px 16px 0;
+    margin-bottom: 8px;
+  }
+
+  .group {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(82%, 340px);
+    margin: 0 auto 16px;
+    display: block;
+  }
+
+  .text {
+    position: relative;
+    left: auto;
+    top: auto;
+    max-width: 100%;
+    padding: 0 20px;
+    font-size: clamp(17px, 3.8vw, 30px);
+    margin-bottom: 24px;
+  }
+
+  .contact-links {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px 80px;
+    max-width: 100%;
+  }
+
+  .contact-links a,
+  .contact-links .ima {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .contact-links img.gmail,
+  .contact-links img.github,
+  .contact-links img.linkedin,
+  .contact-links img.instagram,
+  .contact-links img.pinterest,
+  .contact-links img.spotify {
+    width: clamp(44px, 11vw, 70px) !important;
+    height: auto;
+  }
+
+  .smalltext {
+    position: relative;
+    right: auto;
+    top: auto;
+    padding: 0 20px 24px;
+    font-size: clamp(16px, 3.5vw, 25px);
+    text-align: center;
+  }
+
+  .projects-grid {
+    position: relative;
+    top: auto;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 28px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+  }
+
+  .project-text h3 {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  .project-text p,
+  .textp {
+    font-size: clamp(16px, 3.6vw, 25px);
+  }
+
+  .blog-section {
+    position: relative;
+    top: auto;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .blog-grid {
+    justify-content: center;
+  }
+
+  .blog-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .friends {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 12px 100px;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  #contact-form {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 520px;
+    margin: 24px auto 0;
+    align-items: stretch;
+    padding: 0 12px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #contact-form textarea {
+    height: min(40vh, 280px);
+  }
+
+  .let {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(200px, 45vw);
+    margin: 16px auto 0;
+    transform: rotate(45deg);
+    display: block;
+  }
+
+  .whiteboardd {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  .dms {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  canvas {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin: 0 auto;
+    display: block;
+    max-width: min(100vw - 2rem, 500px);
+    width: 100%;
+    height: auto;
+    aspect-ratio: 500 / 550;
+    box-sizing: content-box;
+  }
+
+  .color-palette {
+    position: relative;
+    right: auto;
+    top: auto;
+    justify-content: center;
+    margin: 16px auto 0;
+    flex-wrap: wrap;
+  }
+
+  .eraser {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: clamp(36px, 10vw, 56px);
+    margin: 12px auto 0;
+    display: block;
+  }
+
+  .canvas-controls {
+    position: relative;
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin: 16px auto 0;
+    gap: 20px;
+  }
+
+  .canvas-controls span {
+    font-size: clamp(20px, 5vw, 30px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero .img {
+    transform: scale(0.82) rotate(var(--rot, 0deg));
+  }
+
+  .hero .img:hover {
+    transform: scale(0.92) rotate(calc(var(--rot, 0deg) + 2deg)) translateY(-6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: clamp(14px, 3.5vw, 22px);
+  }
+
+  .footer {
+    font-size: clamp(14px, 4vw, 22px);
+    padding: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .project-card {
+    transition: none;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+
+  .img {
+    transition: none;
+  }
+
+  .img:hover {
+    transform: scale(1.05) rotate(var(--rot, 0deg));
+  }
 }

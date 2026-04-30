@@ -261,3 +261,32 @@ iframe {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
+
+.hero iframe {
+  align-self: center;
+  max-width: min(800px, calc(100vw - 2rem));
+  width: 100% !important;
+  height: auto !important;
+  min-height: 152px;
+  aspect-ratio: 800 / 200;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .radio,
+  .cam {
+    display: none;
+  }
+
+  .hero iframe {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 auto;
+  }
+}

@@ -26,6 +26,7 @@ body {
   gap: 25px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem 2rem;
 }
 
 /* Individual Photo Card */
@@ -312,4 +313,33 @@ a {
 iframe {
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.titlee {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  padding: 1rem 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .quote {
+    padding: 0.75rem 1rem;
+    font-size: clamp(12px, 3.5vw, 15px);
+  }
+
+  .menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero {
+    background-attachment: scroll;
+  }
 }
