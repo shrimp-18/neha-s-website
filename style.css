@@ -633,9 +633,10 @@ canvas{
 }
 
 .project-text h3{
-  
+  font-family: Things, Georgia, serif;
   color:#283F75;
   font-size: 40px;
+  font-weight: 500;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-top: 10px;
@@ -643,6 +644,7 @@ canvas{
 }
 
 .project-text p{
+  font-family: Things, Georgia, serif;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-top: 10px;
@@ -993,14 +995,19 @@ canvas{
   }
 
   .project-text h3 {
-    font-family: Gelasio, Georgia, serif;
-    font-weight: 700;
+    font-family: Things, Georgia, serif;
+    font-weight: 500;
     font-size: clamp(22px, calc(100vw * 42 / 1061), 34px);
     margin-right: 14px;
   }
 
-  .project-text p,
-  .textp {
+  .project-text p {
+    font-family: Things, Georgia, serif;
+    font-size: clamp(15px, calc(100vw * 26 / 1061), 20px);
+    line-height: 1.45;
+  }
+
+  .project-text .textp {
     font-family: Gelasio, Georgia, serif;
     font-size: clamp(15px, calc(100vw * 26 / 1061), 20px);
     line-height: 1.45;
