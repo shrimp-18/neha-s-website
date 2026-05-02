@@ -94,16 +94,24 @@ body{
 .navbar.is-open .nav-toggle-bar:nth-child(3){
   transform:translateY(-6.5px) rotate(-45deg);
 }
-.group{
-  width:26%;
+.about-polaroids{
+  position:absolute;
   top:12%;
   right:4%;
-   position:absolute;
+  width:26%;
   height:auto;
+  pointer-events:none;
+}
+
+.about-polaroids .group{
+  width:100%;
+  height:auto;
+  display:block;
   object-fit:contain;
+  position:relative;
+  top:auto;
+  right:auto;
   filter: drop-shadow(0 10px 12px rgba(0,0,0,0.2));
-
-
 }
 .text{
   position: absolute;
@@ -803,12 +811,23 @@ canvas{
     margin-bottom: 8px;
   }
 
-  .group {
+  .about-polaroids {
     position: relative;
     top: auto;
     right: auto;
-    width: min(82%, 340px);
-    margin: 0 auto 16px;
+    width: 100%;
+    max-width: 100%;
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 12px 16px 8px;
+    margin: 0 auto;
+  }
+
+  .about-polaroids .group {
+    width: min(88%, 380px);
+    margin: 0 auto;
     display: block;
   }
 
@@ -831,8 +850,30 @@ canvas{
     gap: 14px 18px;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 20px 80px;
+    padding: 0 20px 28px;
     max-width: 100%;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .about .abt {
+    text-align: left;
+    align-self: stretch;
+    font-family: Gelasio, Georgia, serif;
+  }
+
+  .about .text {
+    font-family: Gelasio, Georgia, serif;
+    line-height: 1.55;
+  }
+
+  .about .smalltext {
+    text-align: left;
+    padding-top: 8px;
   }
 
   .contact-links a,
@@ -1272,6 +1313,71 @@ canvas{
     right: 11%;
     left: auto;
     z-index: 11;
+  }
+
+  .about {
+    padding-top: max(48px, env(safe-area-inset-top, 0px) + 6px);
+  }
+
+  .about .abt {
+    font-family: Gelasio, Georgia, serif;
+    font-weight: 600;
+    padding: 4px 20px 0;
+    margin-bottom: 10px;
+    font-size: clamp(48px, calc(100vw * 112 / 1061), 88px);
+    color: #f70a36;
+    line-height: 0.9;
+  }
+
+  .about .text {
+    font-family: Gelasio, Georgia, serif;
+    font-size: clamp(15px, calc(100vw * 27 / 1061), 18px);
+    line-height: 1.55;
+    padding: 0 20px;
+    margin-bottom: 18px;
+  }
+
+  .about .contact-links {
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 0 20px 20px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .about .contact-links img.gmail,
+  .about .contact-links img.github,
+  .about .contact-links img.linkedin,
+  .about .contact-links img.instagram,
+  .about .contact-links img.pinterest,
+  .about .contact-links img.spotify {
+    width: clamp(40px, calc(100vw * 66 / 1061), 52px) !important;
+    height: clamp(40px, calc(100vw * 66 / 1061), 52px) !important;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(40, 63, 117, 0.12);
+    flex-shrink: 0;
+  }
+
+  .about-polaroids {
+    padding: 8px 10px 28px;
+    margin-top: 0;
+  }
+
+  .about-polaroids .group {
+    width: min(94vw, calc(100vw * 990 / 1061));
+    max-width: 540px;
+    transform: rotate(-1.25deg);
+    filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.24));
+  }
+
+  .about .smalltext {
+    text-align: left;
+    padding: 4px 20px 32px;
+    font-size: clamp(14px, calc(100vw * 23 / 1061), 17px);
   }
 }
 
