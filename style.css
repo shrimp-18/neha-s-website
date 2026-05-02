@@ -262,13 +262,14 @@ body{
   top: 40px;
   left: 40px;
 
+  font-family: Things, Georgia, serif;
   font-size: 120px;
   color: #F70A36;   
   font-weight: 500;
 
   line-height: 0.8;
   letter-spacing: 0px;
- -webkit-text-stroke: 0.8px #F70A36;
+ -webkit-text-stroke: 0.6px #F70A36;
 }
 .scroll{
   position: absolute;
@@ -863,7 +864,9 @@ canvas{
   .about .abt {
     text-align: left;
     align-self: stretch;
-    font-family: Gelasio, Georgia, serif;
+    font-family: Things, Georgia, serif;
+    font-weight: 500;
+    -webkit-text-stroke: 0.6px #f70a36;
   }
 
   .about .text {
@@ -883,14 +886,52 @@ canvas{
     top: auto !important;
   }
 
+  .about .contact-links {
+    flex-wrap: nowrap;
+    gap: clamp(6px, calc(100vw * 14 / 1061), 14px);
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .about .contact-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about .contact-links a,
+  .about .contact-links .ima {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    flex-shrink: 0;
+  }
+
   .contact-links img.gmail,
   .contact-links img.github,
   .contact-links img.linkedin,
   .contact-links img.instagram,
   .contact-links img.pinterest,
   .contact-links img.spotify {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
     width: clamp(44px, 11vw, 70px) !important;
     height: auto;
+  }
+
+  .about .contact-links img.gmail,
+  .about .contact-links img.github,
+  .about .contact-links img.linkedin,
+  .about .contact-links img.instagram,
+  .about .contact-links img.pinterest,
+  .about .contact-links img.spotify {
+    width: auto !important;
+    height: clamp(36px, calc(100vw * 54 / 1061), 52px) !important;
+    max-width: clamp(52px, calc(100vw * 92 / 1061), 88px);
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
   }
 
   .smalltext {
@@ -1320,13 +1361,14 @@ canvas{
   }
 
   .about .abt {
-    font-family: Gelasio, Georgia, serif;
-    font-weight: 600;
+    font-family: Things, Georgia, serif;
+    font-weight: 500;
     padding: 4px 20px 0;
     margin-bottom: 10px;
     font-size: clamp(48px, calc(100vw * 112 / 1061), 88px);
     color: #f70a36;
     line-height: 0.9;
+    -webkit-text-stroke: 0.6px #f70a36;
   }
 
   .about .text {
@@ -1338,11 +1380,9 @@ canvas{
   }
 
   .about .contact-links {
-    flex-wrap: nowrap;
-    gap: 10px;
+    gap: clamp(5px, calc(100vw * 12 / 1061), 12px);
     padding: 0 20px 20px;
-    overflow-x: auto;
-    scrollbar-width: thin;
+    scrollbar-width: none;
   }
 
   .about .contact-links img.gmail,
@@ -1351,15 +1391,8 @@ canvas{
   .about .contact-links img.instagram,
   .about .contact-links img.pinterest,
   .about .contact-links img.spotify {
-    width: clamp(40px, calc(100vw * 66 / 1061), 52px) !important;
-    height: clamp(40px, calc(100vw * 66 / 1061), 52px) !important;
-    object-fit: contain;
-    border-radius: 50%;
-    background: #fff;
-    padding: 5px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(40, 63, 117, 0.12);
-    flex-shrink: 0;
+    height: clamp(38px, calc(100vw * 52 / 1061), 50px) !important;
+    max-width: clamp(50px, calc(100vw * 96 / 1061), 92px);
   }
 
   .about-polaroids {
