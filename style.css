@@ -268,15 +268,17 @@ body{
 .arrow.friends-arrow-flow{
   position:absolute;
   display:flex;
-  width:5%;
-  left:35%;
-  top:20%;
-  justify-content:center;
+  width: min(18vw, 340px);
+  min-width: 180px;
+  left: 32%;
+  top: 18%;
+  justify-content: center;
 }
 
 .arrow.friends-arrow-flow img{
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .abt{
   position: absolute;
