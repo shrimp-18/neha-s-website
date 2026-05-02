@@ -60,14 +60,14 @@ body{
   display:none;
   flex-direction:column;
   justify-content:center;
-  gap:5px;
-  width:48px;
-  height:48px;
-  padding:12px;
+  gap:4px;
+  width:40px;
+  height:40px;
+  padding:9px;
   flex-shrink:0;
   background:#283F75;
   border:2px solid #fff6b8;
-  border-radius:12px;
+  border-radius:10px;
   cursor:pointer;
   box-shadow:0 4px 14px rgba(0,0,0,0.22);
   z-index:201;
@@ -84,7 +84,7 @@ body{
 }
 
 .navbar.is-open .nav-toggle-bar:nth-child(1){
-  transform:translateY(8px) rotate(45deg);
+  transform:translateY(6.5px) rotate(45deg);
 }
 
 .navbar.is-open .nav-toggle-bar:nth-child(2){
@@ -92,7 +92,7 @@ body{
 }
 
 .navbar.is-open .nav-toggle-bar:nth-child(3){
-  transform:translateY(-8px) rotate(-45deg);
+  transform:translateY(-6.5px) rotate(-45deg);
 }
 .group{
   width:26%;
@@ -1012,6 +1012,9 @@ canvas{
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
+    width: clamp(34px, calc(100vw * 42 / 1061), 40px);
+    height: clamp(34px, calc(100vw * 42 / 1061), 40px);
+    padding: clamp(7px, calc(100vw * 10 / 1061), 9px);
   }
 
   .navbar {
@@ -1057,9 +1060,6 @@ canvas{
     box-shadow: none;
     border-color: #fff6b8;
     margin: 0;
-    width: clamp(36px, calc(100vw * 52 / 1061), 48px);
-    height: clamp(36px, calc(100vw * 52 / 1061), 48px);
-    padding: clamp(8px, calc(100vw * 12 / 1061), 12px);
     flex-shrink: 0;
   }
 
