@@ -28,18 +28,70 @@ html{
 .navbar{
   background:#283F75;
   display:flex;
-  justify-content:space-around;
-  padding:15px 0  1px;
-  align-items:flex-end; 
+  justify-content:space-between;
+  align-items:flex-end;
+  padding:15px 0 1px;
   border-bottom: 4px solid #FFF6B8;
+  position: relative;
 }
 
-.navbar a{
+.navbar-menu{
+  display:flex;
+  justify-content:space-around;
+  align-items:flex-end;
+  flex:1;
+  width:100%;
+}
+
+.navbar-menu a{
   font-family: Saira, serif;
   text-decoration:none;
   color:#FFF6B8;
   font-size:32px;
   letter-spacing:2px;
+}
+
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  gap:6px;
+  width:46px;
+  height:46px;
+  padding:11px;
+  margin:0 12px 4px auto;
+  flex-shrink:0;
+  background:transparent;
+  border:2px solid #FFF6B8;
+  border-radius:10px;
+  cursor:pointer;
+  z-index:1002;
+}
+
+.nav-toggle-bar{
+  display:block;
+  height:3px;
+  width:100%;
+  background:#FFF6B8;
+  border-radius:2px;
+  transform-origin:center;
+  transition:transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar.is-open .nav-toggle-bar:nth-child(1){
+  transform:translateY(8px) rotate(45deg);
+}
+
+.navbar.is-open .nav-toggle-bar:nth-child(2){
+  opacity:0;
+}
+
+.navbar.is-open .nav-toggle-bar:nth-child(3){
+  transform:translateY(-8px) rotate(-45deg);
+}
+
+.nav-backdrop{
+  display:none;
 }
 .group{
   width:26%;
@@ -698,14 +750,15 @@ canvas{
     overflow: visible;
   }
 
-  .navbar {
+  .navbar-menu {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px 16px;
-    padding: 12px 10px 8px;
+    row-gap: 10px;
+    padding: 0 8px 8px;
   }
 
-  .navbar a {
+  .navbar-menu a {
     font-size: clamp(18px, 3.2vw, 32px);
     letter-spacing: 1px;
   }
@@ -955,19 +1008,95 @@ canvas{
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 6px 10px;
+    min-height: 56px;
+  }
+
+  .nav-toggle {
+    display: flex;
+    margin: 0 10px 0 0;
+    align-self: center;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(300px, 88vw);
+    height: 100vh;
+    height: 100dvh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    padding: 72px 20px 24px;
+    margin: 0;
+    background: #283f75;
+    border-left: 4px solid #fff6b8;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.28s ease;
+    z-index: 1001;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar.is-open .navbar-menu {
+    transform: translateX(0);
+  }
+
+  .navbar-menu a {
+    font-size: clamp(22px, 5.5vw, 30px);
+    letter-spacing: 2px;
+    padding: 14px 10px;
+    border-bottom: 1px solid rgba(255, 246, 184, 0.22);
+  }
+
+  .navbar-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.38);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+    z-index: 1000;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .navbar.is-open .nav-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .hero .img {
-    transform: scale(0.82) rotate(var(--rot, 0deg));
+    transform: scale(1.22) rotate(var(--rot, 0deg));
   }
 
   .hero .img:hover {
-    transform: scale(0.92) rotate(calc(var(--rot, 0deg) + 2deg)) translateY(-6px);
+    transform: scale(1.32) rotate(calc(var(--rot, 0deg) + 2deg)) translateY(-8px);
   }
 }
 
 @media (max-width: 480px) {
-  .navbar a {
-    font-size: clamp(14px, 3.5vw, 22px);
+  .navbar-menu a {
+    font-size: clamp(18px, 5vw, 26px);
   }
 
   .footer {
@@ -979,6 +1108,10 @@ canvas{
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .nav-toggle-bar {
+    transition: none;
   }
 
   .project-card {
@@ -995,5 +1128,20 @@ canvas{
 
   .img:hover {
     transform: scale(1.05) rotate(var(--rot, 0deg));
+  }
+
+  @media (max-width: 768px) {
+    .navbar-menu,
+    .nav-backdrop {
+      transition: none;
+    }
+
+    .hero .img {
+      transform: rotate(var(--rot, 0deg));
+    }
+
+    .hero .img:hover {
+      transform: scale(1.06) rotate(var(--rot, 0deg));
+    }
   }
 }

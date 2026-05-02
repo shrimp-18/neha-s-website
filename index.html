@@ -15,11 +15,19 @@
 <body>
   
   <nav class="navbar">
-    <a href="#hero">HOME</a>
-    <a href="#about">ABOUT</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#blog">BLOG</a>
-    <a href="#friends">CONTACT</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="navbar-menu" aria-label="Open menu">
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+    <div class="nav-backdrop" aria-hidden="true" tabindex="-1"></div>
+    <div class="navbar-menu" id="navbar-menu">
+      <a href="#hero">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#blog">BLOG</a>
+      <a href="#friends">CONTACT</a>
+    </div>
   </nav>
 
 
@@ -236,6 +244,7 @@ It works without a battery and harvests energy from the phone to light up the LE
   <p>© 2026 Neha Lalit Kumar Arya. All rights reserved.</p>
   </footer>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="nav.js"></script>
   <script src="whiteboard.js"></script>
   
 </body>
