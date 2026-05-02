@@ -1133,7 +1133,7 @@ canvas{
   .hero .img {
     transform: rotate(var(--rot, 0deg));
     filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.22));
-    max-width: min(28vmin, calc(100vw * 270 / 1061));
+    max-width: min(48vmin, calc(100vw * 455 / 1061));
   }
 
   .hero .img:hover {
@@ -1141,137 +1141,135 @@ canvas{
     filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.28));
   }
 
-  
-
   .hero .paint {
-    width: 21vmin;
-    top: 11%;
-    left: 3%;
+    width: min(32vmin, calc(100vw * 335 / 1061));
+    top: 12%;
+    left: 8%;
     z-index: 6;
   }
 
   .hero .starbig {
-    width: 8vmin;
-    top: 17%;
-    left: 42%;
+    width: min(11vmin, calc(100vw * 118 / 1061));
+    top: 18%;
+    left: 43%;
     z-index: 14;
   }
 
   .hero .star {
-    width: 6vmin;
-    top: 18%;
+    width: min(9vmin, calc(100vw * 98 / 1061));
+    top: 19%;
     left: 49%;
     z-index: 13;
   }
 
   .hero .stamp {
-    width: 10vmin;
+    width: min(14vmin, calc(100vw * 148 / 1061));
     top: 21%;
-    left: 54%;
+    left: 53%;
     z-index: 12;
   }
 
   .hero .bow {
-    width: 19vmin;
-    top: 9%;
-    right: 3%;
+    width: min(26vmin, calc(100vw * 275 / 1061));
+    top: 11%;
+    right: 11%;
     left: auto;
     z-index: 16;
   }
 
   .hero .reciept {
-    width: 25vmin;
-    top: 13%;
-    right: 2%;
+    width: min(34vmin, calc(100vw * 360 / 1061));
+    top: 14%;
+    right: 9%;
     left: auto;
     z-index: 4;
   }
 
   .hero .camera {
-    width: 21vmin;
-    top: 20%;
-    right: 5%;
+    width: min(30vmin, calc(100vw * 315 / 1061));
+    top: 22%;
+    right: 11%;
     left: auto;
     z-index: 8;
   }
 
   .hero .letters {
-    width: 19vmin;
-    top: 34%;
-    right: 4%;
+    width: min(27vmin, calc(100vw * 285 / 1061));
+    top: 36%;
+    right: 10%;
     left: auto;
     z-index: 7;
   }
 
   .hero .belt {
-    width: 11vmin;
-    top: 30%;
-    right: 16%;
+    width: min(15vmin, calc(100vw * 158 / 1061));
+    top: 24%;
+    right: 22%;
     left: auto;
     z-index: 5;
   }
 
   .hero .vinyl {
-    width: 19vmin;
-    bottom: 15%;
-    left: 4%;
+    width: min(30vmin, calc(100vw * 315 / 1061));
+    bottom: 48%;
+    left: 10%;
     z-index: 5;
   }
 
   .hero .vine {
-    width: 10vmin;
-    bottom: 19%;
-    left: 7%;
+    width: min(16vmin, calc(100vw * 168 / 1061));
+    bottom: 32%;
+    left: 13%;
     z-index: 6;
   }
 
   .hero .radio {
-    width: 17vmin;
-    bottom: 26%;
-    left: 18%;
+    width: min(26vmin, calc(100vw * 272 / 1061));
+    bottom: 38%;
+    left: 13%;
     z-index: 8;
   }
 
   .hero .calendar {
-    width: 15vmin;
-    bottom: 6%;
-    left: 9%;
+    width: min(22vmin, calc(100vw * 232 / 1061));
+    bottom: 22%;
+    left: 38%;
     z-index: 10;
   }
 
   .hero .grapes {
-    width: 11vmin;
-    bottom: 9%;
-    left: 23%;
+    width: min(15vmin, calc(100vw * 158 / 1061));
+    bottom: 26%;
+    left: 30%;
     z-index: 9;
   }
 
   .hero .pcb {
-    width: 17vmin;
-    bottom: 13%;
-    left: 34%;
+    width: min(28vmin, calc(100vw * 295 / 1061));
+    bottom: 18%;
+    left: 42%;
     z-index: 11;
   }
 
   .hero .clover {
-    width: 10vmin;
-    bottom: 11%;
-    left: 46%;
+    width: min(14vmin, calc(100vw * 148 / 1061));
+    bottom: 20%;
+    left: 54%;
     z-index: 12;
   }
 
   .hero .plumeria {
-    width: 20vmin;
-    bottom: 11%;
-    right: 5%;
+    width: min(30vmin, calc(100vw * 315 / 1061));
+    bottom: 24%;
+    right: 9%;
     left: auto;
     z-index: 10;
   }
 
   .hero .cherry {
-    width: 14vmin;
-    bottom: 6%;
-    right: 4%;
+    width: min(20vmin, calc(100vw * 210 / 1061));
+    bottom: 16%;
+    right: 11%;
     left: auto;
     z-index: 11;
   }
