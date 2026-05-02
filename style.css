@@ -16,13 +16,18 @@
   font-family: 'Saira';
   src: url('fonts/SairaCondensed-Regular.ttf');
 }
+html{
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body{
   font-family:'Things';
   cursor: url('assets/c.png'), auto;
-}
-
-html{
-  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .navbar{
@@ -181,6 +186,8 @@ html{
 }
 .hero{
   position:relative;
+  width:100%;
+  max-width:100%;
   height:100vh;
   background:#F70A36;
   display:flex;
@@ -725,8 +732,6 @@ canvas{
   transform: scale(1.03);
 }
 
-/* ——— Responsive (desktop styles above unchanged) ——— */
-
 @media (max-width: 1200px) {
   .projects-grid {
     grid-template-columns: 1fr 1fr;
@@ -1077,161 +1082,188 @@ canvas{
   }
 
   .hero {
+    width: 100%;
+    max-width: 100vw;
     padding-top: max(64px, calc(env(safe-area-inset-top) + 52px));
     min-height: 100vh;
     min-height: 100dvh;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-sizing: border-box;
   }
 
+  
   .hero .title {
-    font-family: Gelasio, Georgia, "Times New Roman", serif;
-    font-size: clamp(3.2rem, 14vw, 5.8rem);
-    color: #ffffff;
-    -webkit-text-stroke: 1px #ffffff;
+    font-family: Things, Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2.85rem, 10.5vw, 4.75rem);
+    color: #fff6b8;
+    -webkit-text-stroke: 1.5px #fff6b8;
     text-align: center;
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 0 16px;
     position: relative;
     z-index: 25;
+    line-height: 0.82;
+    max-width: 100%;
   }
 
   .hero .line2 {
-    margin-left: clamp(1.75rem, 16vw, 4.5rem);
+    margin-left: clamp(2rem, 14vw, 3.75rem);
     display: inline-block;
   }
 
   .hero .scroll {
     z-index: 30;
-    bottom: 4%;
+    bottom: max(12px, env(safe-area-inset-bottom));
     top: auto;
+    right: 3%;
   }
 
   .hero .img {
     transform: rotate(var(--rot, 0deg));
-    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.22));
   }
 
   .hero .img:hover {
-    transform: scale(1.08) rotate(calc(var(--rot, 0deg) + 2deg)) translateY(-6px);
-    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.32));
+    transform: scale(1.06) rotate(calc(var(--rot, 0deg) + 1.5deg)) translateY(-5px);
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.28));
   }
+
+  
 
   .hero .paint {
-    width: 24vmin;
-    top: 10%;
-    left: 4%;
-  }
-
-  .hero .vinyl {
-    width: 22vmin;
-    bottom: 16%;
-    left: 2%;
-  }
-
-  .hero .radio {
-    width: 20vmin;
-    bottom: 20%;
-    left: 26%;
-  }
-
-  .hero .calendar {
-    width: 19vmin;
-    bottom: 4%;
-    left: 14%;
-  }
-
-  .hero .vine {
-    width: 11vmin;
-    bottom: 12%;
-    left: 2%;
-  }
-
-  .hero .grapes {
-    width: 13vmin;
-    bottom: 2%;
-    left: 28%;
-  }
-
-  .hero .pcb {
-    width: 23vmin;
-    bottom: 8%;
-    left: 36%;
-  }
-
-  .hero .star {
-    width: 7vmin;
-    top: 22%;
-    left: 40%;
+    width: 21vmin;
+    top: 11%;
+    left: 3%;
+    z-index: 6;
   }
 
   .hero .starbig {
-    width: 9vmin;
-    top: 20%;
-    left: 36%;
+    width: 8vmin;
+    top: 17%;
+    left: 42%;
+    z-index: 14;
+  }
+
+  .hero .star {
+    width: 6vmin;
+    top: 18%;
+    left: 49%;
+    z-index: 13;
   }
 
   .hero .stamp {
-    width: 11vmin;
-    top: 24%;
-    left: 48%;
-  }
-
-  .hero .camera {
-    width: 24vmin;
-    top: 24%;
-    right: 6%;
-    left: auto;
-  }
-
-  .hero .reciept {
-    width: 27vmin;
-    top: 12%;
-    right: 4%;
-    left: auto;
+    width: 10vmin;
+    top: 21%;
+    left: 54%;
+    z-index: 12;
   }
 
   .hero .bow {
-    width: 22vmin;
-    top: 8%;
+    width: 19vmin;
+    top: 9%;
+    right: 3%;
+    left: auto;
+    z-index: 16;
+  }
+
+  .hero .reciept {
+    width: 25vmin;
+    top: 13%;
     right: 2%;
     left: auto;
+    z-index: 4;
+  }
+
+  .hero .camera {
+    width: 21vmin;
+    top: 20%;
+    right: 5%;
+    left: auto;
+    z-index: 8;
   }
 
   .hero .letters {
-    width: 22vmin;
-    top: 36%;
-    right: 6%;
+    width: 19vmin;
+    top: 34%;
+    right: 4%;
     left: auto;
+    z-index: 7;
   }
 
   .hero .belt {
-    width: 13vmin;
-    bottom: 22%;
-    right: 30%;
+    width: 11vmin;
+    top: 30%;
+    right: 16%;
     left: auto;
+    z-index: 5;
   }
 
-  .hero .plumeria {
-    width: 23vmin;
-    bottom: 12%;
-    right: 8%;
-    left: auto;
+  .hero .vinyl {
+    width: 19vmin;
+    bottom: 15%;
+    left: 4%;
+    z-index: 5;
+  }
+
+  .hero .vine {
+    width: 10vmin;
+    bottom: 19%;
+    left: 7%;
+    z-index: 6;
+  }
+
+  .hero .radio {
+    width: 17vmin;
+    bottom: 26%;
+    left: 18%;
+    z-index: 8;
+  }
+
+  .hero .calendar {
+    width: 15vmin;
+    bottom: 6%;
+    left: 9%;
+    z-index: 10;
+  }
+
+  .hero .grapes {
+    width: 11vmin;
+    bottom: 9%;
+    left: 23%;
+    z-index: 9;
+  }
+
+  .hero .pcb {
+    width: 17vmin;
+    bottom: 13%;
+    left: 34%;
+    z-index: 11;
   }
 
   .hero .clover {
-    width: 12vmin;
-    bottom: 10%;
-    right: 38%;
+    width: 10vmin;
+    bottom: 11%;
+    left: 46%;
+    z-index: 12;
+  }
+
+  .hero .plumeria {
+    width: 20vmin;
+    bottom: 11%;
+    right: 5%;
     left: auto;
+    z-index: 10;
   }
 
   .hero .cherry {
-    width: 16vmin;
+    width: 14vmin;
     bottom: 6%;
     right: 4%;
     left: auto;
+    z-index: 11;
   }
 }
 

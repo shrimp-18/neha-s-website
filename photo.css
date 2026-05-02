@@ -29,7 +29,6 @@ body {
   padding: 0 1rem 2rem;
 }
 
-/* Individual Photo Card */
 .photo-card {
   background-color: #E8FFB7;
   border-radius: 20px;
@@ -43,7 +42,6 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Image Style */
 .photo-card img {
   width: 100%;
   height: auto;
