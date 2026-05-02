@@ -210,9 +210,6 @@ It works without a battery and harvests energy from the phone to light up the LE
   <div class="friends-mobile-stack">
 
     <div class="friends-form-wrap">
-      <div class="arrow friends-arrow-swirl" aria-hidden="true">
-        <img src="assets/arrow.png" alt="">
-      </div>
       <form id="contact-form">
 
         <input type="text" name="user_name" placeholder="NAME" required>
@@ -226,10 +223,11 @@ It works without a battery and harvests energy from the phone to light up the LE
       </form>
     </div>
 
+    <div class="arrow friends-arrow-flow" aria-hidden="true">
+      <img src="assets/arrow.png" alt="">
+    </div>
+
     <div class="friends-draw-wrap">
-      <div class="arrow friends-arrow-down" aria-hidden="true">
-        <img src="assets/arrow.png" alt="">
-      </div>
       <div class="whiteboardd">
         <div class="dms"><h2>DRAW ME SOMETHING !</h2></div>
         <canvas id="canvas"></canvas>
@@ -242,7 +240,7 @@ It works without a battery and harvests energy from the phone to light up the LE
           <span style="background:#fffb00" onclick="setColor('#fffb00', this)"></span>
           <span style="background:#04ff00" onclick="setColor('#04ff00', this)"></span>
         </div>
-        <img class="eraser" onclick="setColor('#fffdf0s')" src="assets/eraser.png" alt="">
+        <img class="eraser" onclick="setColor('#fffdf0')" src="assets/eraser.png" alt="">
         <div class="canvas-controls">
           <span onclick="clearCanvas()">CLEAR</span>
           <span onclick="sendEverything()">SEND</span>
