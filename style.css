@@ -227,7 +227,7 @@ body{
 }
 .projects{
   position:relative;
-  height: 100vh;
+  height: 150vh;
   background:#FFF6B8;
   display:flex;
   justify-content:center;
