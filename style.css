@@ -117,13 +117,13 @@ body{
   position: absolute;
   font-family: Things, serif;
   color: #F70A36;
-  font-size: 30px;
+  font-size: clamp(22px, 2.2vw, 30px);
   font-weight: 500;
   text-align: left;
   left: 2.6%;
   top: 25%;
   -webkit-text-stroke: 0.5px #F70A36;
-  max-width: 1100px;
+  max-width: min(1100px, 58vw);
   margin-right:  10px;
 }
 .smalltext{
@@ -288,7 +288,7 @@ body{
   left: 40px;
 
   font-family: Things, Georgia, serif;
-  font-size: 120px;
+  font-size: clamp(72px, 8vw, 120px);
   color: #F70A36;   
   font-weight: 500;
 
@@ -333,7 +333,7 @@ body{
   z-index: 10;
   color: #FFF6B8;
 
-  font-size: 125px;
+  font-size: clamp(80px, 9vw, 125px);
   text-align: center;
 
   line-height: 0.8;
@@ -346,7 +346,7 @@ body{
 
 
 .line2{
-  margin-left: 190px; 
+  margin-left: clamp(80px, 14vw, 190px);
 }
 .img{
   position:absolute;
@@ -553,9 +553,13 @@ canvas{
   position: absolute;
   top: 20%;
   right: 5%;
+  width: min(500px, 38vw);
+  height: auto;
+  aspect-ratio: 500 / 550;
   border: 8px solid #283F75;
   background: #fffce9;
   cursor: crosshair;
+  box-sizing: content-box;
 }
 .dms{
   position: absolute;
@@ -666,8 +670,10 @@ canvas{
 
 #contact-form input,
 #contact-form textarea{
-  width: 800px;
+  width: min(800px, 46vw);
+  max-width: 100%;
   padding: 10px;
+  box-sizing: border-box;
 
   border: 5px solid #283F75;
   background: #fffbe1;
@@ -684,9 +690,14 @@ canvas{
   position: absolute;
   top: 20%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  padding: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px);
+  padding: clamp(20px, 3vw, 40px);
+  width: 100%;
+  max-width: 1520px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
 }
 .project-card{
   display: flex;
@@ -694,7 +705,8 @@ canvas{
   align-items: stretch;
   background: #C1ECFD; 
   border: 5px solid #F70A36;
-  width: 455px;
+  width: 100%;
+  max-width: 455px;
   min-height: 228px;
   height: auto;
   box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
@@ -852,6 +864,367 @@ canvas{
   .project-card {
     width: 100%;
     max-width: 455px;
+  }
+
+  .projects {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 72px;
+  }
+}
+
+/* Laptop / compact desktop (993px–1440px): fluid layout, no clipped overlap */
+@media (max-width: 1440px) and (min-width: 993px) {
+  .navbar-menu a {
+    font-size: clamp(22px, 2.2vw, 30px);
+  }
+
+  .title {
+    font-size: clamp(68px, 8.2vw, 108px);
+  }
+
+  .line2 {
+    margin-left: clamp(64px, 11vw, 150px);
+  }
+
+  .abt {
+    font-size: clamp(68px, 7.5vw, 96px);
+    top: 28px;
+    left: clamp(20px, 2.5vw, 36px);
+  }
+
+  .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .about,
+  .projects,
+  .friends,
+  .blog {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 56px;
+  }
+
+  .projects {
+    min-height: auto;
+    padding-top: 16px;
+    padding-bottom: 80px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .blog {
+    min-height: auto;
+    padding-bottom: 48px;
+  }
+
+  .text {
+    max-width: min(58%, 680px);
+    font-size: clamp(20px, 1.85vw, 28px);
+    top: 20%;
+  }
+
+  .about-polaroids {
+    width: min(28%, 320px);
+    top: 10%;
+    right: clamp(12px, 2vw, 28px);
+  }
+
+  .contact-links {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin: 28px 2.6% 20px;
+    width: auto;
+    max-width: min(58%, 680px);
+    font-size: clamp(24px, 2.5vw, 32px);
+  }
+
+  .contact-links a,
+  .contact-links .ima {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .contact-links img.gmail,
+  .contact-links img.github,
+  .contact-links img.linkedin,
+  .contact-links img.instagram,
+  .contact-links img.pinterest,
+  .contact-links img.spotify {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: clamp(44px, 4.5vw, 62px) !important;
+    height: auto !important;
+  }
+
+  .smalltext {
+    position: relative;
+    right: auto;
+    top: auto;
+    text-align: left;
+    margin: 4px 2.6% 0;
+    font-size: clamp(18px, 1.6vw, 24px);
+  }
+
+  .projects-grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: min(960px, 94vw);
+    margin: clamp(100px, 12vh, 140px) auto 0;
+    padding: 0 clamp(16px, 2.5vw, 32px) 24px;
+    box-sizing: border-box;
+    justify-items: center;
+  }
+
+  .project-text h3 {
+    font-size: clamp(26px, 2.8vw, 36px);
+  }
+
+  .project-text p,
+  .project-text .textp {
+    font-size: clamp(17px, 1.6vw, 22px);
+  }
+
+  .blog-section {
+    position: relative;
+    top: auto;
+    width: 100%;
+    max-width: min(1060px, 94vw);
+    margin: clamp(88px, 11vh, 120px) auto 0;
+    padding: 0 clamp(16px, 2.5vw, 32px);
+    box-sizing: border-box;
+  }
+
+  .blog-grid {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .blog-card {
+    width: min(300px, calc((100% - 60px) / 3));
+    min-width: 220px;
+    flex: 1 1 220px;
+    max-width: 100%;
+  }
+
+  .friends {
+    padding-top: 12px;
+    padding-bottom: 64px;
+  }
+
+  .friends-mobile-stack {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(20px, 2.5vw, 36px);
+    align-items: start;
+    width: 100%;
+    max-width: min(1240px, 96vw);
+    margin: clamp(96px, 11vh, 128px) auto 0;
+    padding: 0 clamp(16px, 2.5vw, 36px);
+    box-sizing: border-box;
+  }
+
+  .friends-form-wrap,
+  .friends-draw-wrap {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .friends-arrow-flow {
+    display: none;
+  }
+
+  #contact-form {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #contact-form textarea {
+    height: min(260px, 32vh);
+  }
+
+  .textarea-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .friends .let {
+    position: absolute;
+    top: auto;
+    bottom: 6px;
+    right: 6px;
+    left: auto;
+    width: min(140px, 26vw);
+    transform: rotate(32deg);
+  }
+
+  .whiteboardd {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dms {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  canvas {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 500 / 550;
+    margin: 0 auto;
+    display: block;
+    box-sizing: content-box;
+  }
+
+  .draw-toolbar {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: 14px auto 0;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .draw-toolbar .color-palette,
+  .color-palette {
+    position: static;
+    right: auto;
+    top: auto;
+  }
+
+  .draw-toolbar .eraser,
+  .eraser {
+    position: static;
+    width: clamp(28px, 3vw, 40px);
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 993px) {
+  .text {
+    max-width: min(54%, 560px);
+  }
+
+  .about-polaroids {
+    width: min(30%, 280px);
+  }
+
+  .projects-grid {
+    max-width: min(880px, 92vw);
+    gap: clamp(20px, 2.5vw, 32px);
+  }
+
+  .blog-card {
+    width: min(280px, calc((100% - 40px) / 2));
+    flex: 1 1 240px;
+  }
+
+  .hero .paint { width: 13%; left: 20%; }
+  .hero .vinyl { width: 13%; left: 16%; }
+  .hero .radio { width: 10%; left: 32%; }
+  .hero .camera { width: 13%; right: 28%; }
+  .hero .reciept { width: 15%; right: 18%; }
+  .hero .bow { width: 12%; right: 10%; }
+  .hero .letters { width: 14%; right: 12%; }
+  .hero .plumeria { width: 13%; right: 18%; }
+  .hero .pcb { width: 12%; }
+  .hero .calendar { width: 11%; }
+  .hero .cherry { width: 9%; }
+}
+
+@media (max-width: 1100px) and (min-width: 993px) {
+  .friends-mobile-stack {
+    grid-template-columns: 1fr;
+    max-width: min(520px, 92vw);
+  }
+
+  .text {
+    max-width: 100%;
+    padding-right: min(32%, 300px);
+    box-sizing: border-box;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 993px) {
+  .title {
+    font-size: clamp(52px, 9vh, 82px);
+  }
+
+  .line2 {
+    margin-left: clamp(48px, 9vw, 120px);
+  }
+
+  .abt {
+    font-size: clamp(56px, 10vh, 80px);
+    top: 20px;
+  }
+
+  .text {
+    top: 16%;
+    font-size: clamp(18px, 2.2vh, 24px);
+  }
+
+  .about-polaroids {
+    top: 8%;
+    width: min(26%, 260px);
+  }
+
+  .scroll {
+    top: auto;
+    bottom: max(12px, 2vh);
+  }
+
+  .projects-grid {
+    margin-top: clamp(80px, 14vh, 110px);
+  }
+
+  .friends-mobile-stack {
+    margin-top: clamp(80px, 14vh, 110px);
+  }
+
+  #contact-form textarea {
+    height: min(200px, 28vh);
   }
 }
 
