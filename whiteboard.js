@@ -122,7 +122,7 @@ function sendEverything() {
       clearCanvas();
     })
     .catch((error) => {
-      console.error(error);
+
       alert("failed :(");
     });
 }

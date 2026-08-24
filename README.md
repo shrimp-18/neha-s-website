@@ -18,4 +18,3 @@ No backend has been used for the contact page; it purely works on the[Email JS](
 <br>
 My personal website is a work in progress, and I believe it always will be(because I always wanna add something new and make it better and then once in a while change the aesthetic completely). But as of 6th April,2026, I'm still coding it to complete all pages, make the website responsive and make the icons on the hero section interactive. I hope to publish stuff in my blog regularly after I finish coding the main website. I might also add a backend in the future and keep improving it!
 
-
